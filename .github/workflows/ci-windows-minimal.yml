@@ -6,7 +6,7 @@ env:
   VCPKG_BINARY_SOURCES : 'clear;nuget,GitHub,readwrite'
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
-  VCPKG_VERSION: 'fd766eba2b4cf59c7123d46189be373e2cee959d'
+  VCPKG_VERSION: '2023.04.15'
 
 jobs:
 
@@ -23,6 +23,12 @@ jobs:
             VCPKG_WORKSPACE: 'c:/vcpkg_own'
 
     steps:
+    - name: Install Vulkan SDK
+      uses: humbletim/install-vulkan-sdk@v1.1.1
+      with:
+        version: 1.3.243.0
+        cache: true
+
     - uses: actions/checkout@v3
       with:
         submodules: recursive
@@ -43,15 +49,18 @@ jobs:
     - name: 'Setup NuGet Credentials'
       working-directory: ${{ matrix.VCPKG_WORKSPACE }}
       shell: 'bash'
-      run: >
-        ${{ matrix.mono }} `./vcpkg/vcpkg fetch nuget | tail -n 1`
-        sources add
-        -source "https://nuget.pkg.github.com/pelicanmapping/index.json"
-        -storepasswordincleartext
-        -name "GitHub"
-        -username "pelicanmapping"
+      run: |
+        ${{ matrix.mono }} `./vcpkg/vcpkg fetch nuget | tail -n 1` \
+        sources add \
+        -source "https://nuget.pkg.github.com/${{ github.actor }}/index.json" \
+        -storepasswordincleartext \
+        -name "GitHub" \
+        -username "${{ github.actor }}" \
         -password "${{ secrets.GITHUB_TOKEN }}"
-
+        ${{ matrix.mono }} `./vcpkg/vcpkg fetch nuget | tail -n 1` \
+          setapikey "${{ secrets.GITHUB_TOKEN }}" \
+          -source "https://nuget.pkg.github.com/${{ github.actor }}/index.json"
+          
     - name: Create Build Environment
       run: |
         cmake -E make_directory ${{runner.workspace}}/build
@@ -59,7 +68,8 @@ jobs:
     - name: Configure CMake
       shell: bash
       working-directory: ${{ runner.workspace }}/build
-      run: cmake $GITHUB_WORKSPACE -DWIN32_USE_MP=ON -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DROCKY_SUPPORTS_GDAL=OFF -DROCKY_SUPPORTS_MBTILES=OFF -DCMAKE_TOOLCHAIN_FILE=${{ matrix.VCPKG_WORKSPACE }}/vcpkg/scripts/buildsystems/vcpkg.cmake
+      # Add the following for vcpkg install debugging: -DVCPKG_INSTALL_OPTIONS=--debug  
+      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DROCKY_SUPPORTS_GDAL=OFF -DROCKY_SUPPORTS_MBTILES=OFF -DCMAKE_TOOLCHAIN_FILE=${{ matrix.VCPKG_WORKSPACE }}/vcpkg/scripts/buildsystems/vcpkg.cmake
 
     - name: 'Upload cmake configure log artifact'
       uses: actions/upload-artifact@v3
