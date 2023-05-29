@@ -237,16 +237,12 @@ $(function() {
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        vsg::ref_ptr&lt;vsg::ushortArray&gt; createIndices(</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keyword">const</span> Settings&amp; settings) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordtype">void</span> tessellateSurface(</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordtype">unsigned</span> tileSize,</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            vsg::ref_ptr&lt;vsg::ushortArray&gt; primSet) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordtype">bool</span> _enabled;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordtype">bool</span> _debug;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    };</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordtype">bool</span> _enabled;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">bool</span> _debug;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    };</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_cancelable.html">ROCKY_NAMESPACE::Cancelable</a></div><div class="ttdoc">General purpose interface things that can be canceled.</div><div class="ttdef"><b>Definition:</b> IOTypes.h:24</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool_html"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool.html">ROCKY_NAMESPACE::GeometryPool</a></div><div class="ttdef"><b>Definition:</b> GeometryPool.h:131</div></div>
 <div class="ttc" id="aclass_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool_html_a00217ecfa7803cf4248ae70f098af547"><div class="ttname"><a href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_geometry_pool.html#a00217ecfa7803cf4248ae70f098af547">ROCKY_NAMESPACE::GeometryPool::getPooledGeometry</a></div><div class="ttdeci">vsg::ref_ptr&lt; SharedGeometry &gt; getPooledGeometry(const TileKey &amp;tileKey, const Settings &amp;settings, Cancelable *state)</div><div class="ttdef"><b>Definition:</b> GeometryPool.cpp:36</div></div>

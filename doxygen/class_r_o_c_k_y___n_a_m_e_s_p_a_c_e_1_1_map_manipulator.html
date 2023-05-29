@@ -162,10 +162,10 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a370b0e078f0636162c2e377d3c24d7dd"><td class="memItemLeft" align="right" valign="top"><a id="a370b0e078f0636162c2e377d3c24d7dd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a370b0e078f0636162c2e377d3c24d7dd">MapManipulator</a> (vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt; mapNode, vsg::ref_ptr&lt; vsg::Camera &gt; camera)</td></tr>
-<tr class="memdesc:a370b0e078f0636162c2e377d3c24d7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new manipulator. <br /></td></tr>
-<tr class="separator:a370b0e078f0636162c2e377d3c24d7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56919507f54077c5c1c31a033f43ca2f"><td class="memItemLeft" align="right" valign="top"><a id="a56919507f54077c5c1c31a033f43ca2f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a56919507f54077c5c1c31a033f43ca2f">MapManipulator</a> (vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt; mapNode, vsg::ref_ptr&lt; vsg::Window &gt; window, vsg::ref_ptr&lt; vsg::Camera &gt; camera)</td></tr>
+<tr class="memdesc:a56919507f54077c5c1c31a033f43ca2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new manipulator. <br /></td></tr>
+<tr class="separator:a56919507f54077c5c1c31a033f43ca2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eb7c46a7c773e0bbc5c536a66dd20fe"><td class="memItemLeft" align="right" valign="top"><a id="a8eb7c46a7c773e0bbc5c536a66dd20fe"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a8eb7c46a7c773e0bbc5c536a66dd20fe">home</a> ()</td></tr>
 <tr class="memdesc:a8eb7c46a7c773e0bbc5c536a66dd20fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the home position. <br /></td></tr>
@@ -285,9 +285,9 @@ vsg::dquat&#160;</td><td class="memItemRight" valign="bottom"><b>getQuaternion</
 <tr class="memitem:aa6d8b1bd9e89c94caaef0baefb0e66ca"><td class="memItemLeft" align="right" valign="top"><a id="aa6d8b1bd9e89c94caaef0baefb0e66ca"></a>
 vsg::dmat4&#160;</td><td class="memItemRight" valign="bottom"><b>getWorldLookAtMatrix</b> (const vsg::dvec3 &amp;center) const</td></tr>
 <tr class="separator:aa6d8b1bd9e89c94caaef0baefb0e66ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9fe83ba483422d2134a433eeaea884"><td class="memItemLeft" align="right" valign="top"><a id="a6e9fe83ba483422d2134a433eeaea884"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMouseClick</b> () const</td></tr>
-<tr class="separator:a6e9fe83ba483422d2134a433eeaea884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41953cd0aa67f42e729c81d315a0c9da"><td class="memItemLeft" align="right" valign="top"><a id="a41953cd0aa67f42e729c81d315a0c9da"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMouseClick</b> (vsg::ButtonReleaseEvent &amp;) const</td></tr>
+<tr class="separator:a41953cd0aa67f42e729c81d315a0c9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b107098ffbfc4d187fbc8ff66cd4275"><td class="memItemLeft" align="right" valign="top"><a id="a9b107098ffbfc4d187fbc8ff66cd4275"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyOptionsToDeltas</b> (const Action &amp;action, vsg::dvec2 &amp;delta)</td></tr>
 <tr class="separator:a9b107098ffbfc4d187fbc8ff66cd4275"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,15 +303,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCenter</b> (const 
 <tr class="memitem:a0978081dc4409889e9ac4b8d641e4ada"><td class="memItemLeft" align="right" valign="top"><a id="a0978081dc4409889e9ac4b8d641e4ada"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>createLocalCoordFrame</b> (const vsg::dvec3 &amp;worldPos, vsg::dmat4 &amp;out_frame) const</td></tr>
 <tr class="separator:a0978081dc4409889e9ac4b8d641e4ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad434dd649aa608c21dc81f67a5b6cfca"><td class="memItemLeft" align="right" valign="top"><a id="ad434dd649aa608c21dc81f67a5b6cfca"></a>
-<a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a29ff4aeb5d816515dd0e0d70cdb16ac7">ActionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getActionTypeForEvent</b> (const vsg::WindowEvent &amp;ea) const</td></tr>
-<tr class="separator:ad434dd649aa608c21dc81f67a5b6cfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac05d6ca3faa4a10107dedeebfa2b8cb5"><td class="memItemLeft" align="right" valign="top"><a id="ac05d6ca3faa4a10107dedeebfa2b8cb5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleAction</b> (const Action &amp;action, const vsg::dvec2 &amp;delta, vsg::time_point now, double duration)</td></tr>
 <tr class="separator:ac05d6ca3faa4a10107dedeebfa2b8cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7d443710cf53eed618aed7a67e07978"><td class="memItemLeft" align="right" valign="top"><a id="ad7d443710cf53eed618aed7a67e07978"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleMouseAction</b> (const Action &amp;action, vsg::time_point time)</td></tr>
-<tr class="separator:ad7d443710cf53eed618aed7a67e07978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab936178547bda1a0531c9b17e466bab2"><td class="memItemLeft" align="right" valign="top"><a id="ab936178547bda1a0531c9b17e466bab2"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleMouseAction</b> (const Action &amp;action, const vsg::MoveEvent &amp;previous, const vsg::MoveEvent &amp;current)</td></tr>
+<tr class="separator:ab936178547bda1a0531c9b17e466bab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91e37f392b795ce1d7639a8495d0efe2"><td class="memItemLeft" align="right" valign="top"><a id="a91e37f392b795ce1d7639a8495d0efe2"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>handleMouseClickAction</b> (const Action &amp;action, vsg::time_point time)</td></tr>
 <tr class="separator:a91e37f392b795ce1d7639a8495d0efe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -336,14 +333,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clearEvents</b> ()</t
 <tr class="memitem:a1ea3ab1da86e093733e1cd21769a907c"><td class="memItemLeft" align="right" valign="top"><a id="a1ea3ab1da86e093733e1cd21769a907c"></a>
 vsg::ref_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getMapNode</b> () const</td></tr>
 <tr class="separator:a1ea3ab1da86e093733e1cd21769a907c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73bd6b66432a34ef62d72bcd9907fcae"><td class="memItemLeft" align="right" valign="top"><a id="a73bd6b66432a34ef62d72bcd9907fcae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a73bd6b66432a34ef62d72bcd9907fcae">addWindow</a> (vsg::ref_ptr&lt; vsg::Window &gt; window, const vsg::ivec2 &amp;offset={})</td></tr>
-<tr class="memdesc:a73bd6b66432a34ef62d72bcd9907fcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a Window to respond events for, with mouse coordinate offset to treat all associated windows <br /></td></tr>
-<tr class="separator:a73bd6b66432a34ef62d72bcd9907fcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1432825039f14252c1d24f3af2f5b090"><td class="memItemLeft" align="right" valign="top"><a id="a1432825039f14252c1d24f3af2f5b090"></a>
-std::pair&lt; int32_t, int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a1432825039f14252c1d24f3af2f5b090">cameraRenderAreaCoordinates</a> (const vsg::PointerEvent &amp;) const</td></tr>
-<tr class="memdesc:a1432825039f14252c1d24f3af2f5b090"><td class="mdescLeft">&#160;</td><td class="mdescRight">code adopted from VSG <br /></td></tr>
-<tr class="separator:a1432825039f14252c1d24f3af2f5b090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ffc72d18f938bacc4917c91800ba95c"><td class="memItemLeft" align="right" valign="top"><a id="a1ffc72d18f938bacc4917c91800ba95c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a1ffc72d18f938bacc4917c91800ba95c">withinRenderArea</a> (const vsg::PointerEvent &amp;pointerEvent) const</td></tr>
 <tr class="memdesc:a1ffc72d18f938bacc4917c91800ba95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">code adopted from VSG <br /></td></tr>
@@ -353,27 +342,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ae8071bfdcc140ff5dac58c4fe9ad465a"><td class="memItemLeft" align="right" valign="top"><a id="ae8071bfdcc140ff5dac58c4fe9ad465a"></a>
-vsg::observer_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_mapNode</b></td></tr>
-<tr class="separator:ae8071bfdcc140ff5dac58c4fe9ad465a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32728c9231837e3be0965c99a25fd5dc"><td class="memItemLeft" align="right" valign="top"><a id="a32728c9231837e3be0965c99a25fd5dc"></a>
-vsg::ref_ptr&lt; vsg::Camera &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_camera</b></td></tr>
-<tr class="separator:a32728c9231837e3be0965c99a25fd5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62635437b30c70c4c1003f05e9d750e5"><td class="memItemLeft" align="right" valign="top"><a id="a62635437b30c70c4c1003f05e9d750e5"></a>
+vsg::observer_ptr&lt; <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_node.html">MapNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_mapNode_weakptr</b></td></tr>
+<tr class="separator:a62635437b30c70c4c1003f05e9d750e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46be11bb681662ff10650779a80bd72"><td class="memItemLeft" align="right" valign="top"><a id="ab46be11bb681662ff10650779a80bd72"></a>
+vsg::observer_ptr&lt; vsg::Window &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_window_weakptr</b></td></tr>
+<tr class="separator:ab46be11bb681662ff10650779a80bd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ede4ed4d9e2ea07d4da0e1bdbc012b0"><td class="memItemLeft" align="right" valign="top"><a id="a5ede4ed4d9e2ea07d4da0e1bdbc012b0"></a>
+vsg::observer_ptr&lt; vsg::Camera &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_camera_weakptr</b></td></tr>
+<tr class="separator:a5ede4ed4d9e2ea07d4da0e1bdbc012b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adee9f7aba25c80e38bc0976408919f90"><td class="memItemLeft" align="right" valign="top"><a id="adee9f7aba25c80e38bc0976408919f90"></a>
 <a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_s_r_s.html">SRS</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_worldSRS</b></td></tr>
 <tr class="separator:adee9f7aba25c80e38bc0976408919f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa04cd68483f4b5c3db96718587d5d7ff"><td class="memItemLeft" align="right" valign="top"><a id="aa04cd68483f4b5c3db96718587d5d7ff"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::MoveEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_currentMove</b></td></tr>
-<tr class="separator:aa04cd68483f4b5c3db96718587d5d7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e43091c3acd5101b4ba58b4eb1a22d9"><td class="memItemLeft" align="right" valign="top"><a id="a5e43091c3acd5101b4ba58b4eb1a22d9"></a>
 <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::MoveEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_previousMove</b></td></tr>
 <tr class="separator:a5e43091c3acd5101b4ba58b4eb1a22d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830b4e678f7e5b184ded2e74be1cc7c5"><td class="memItemLeft" align="right" valign="top"><a id="a830b4e678f7e5b184ded2e74be1cc7c5"></a>
 <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::ButtonPressEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_buttonPress</b></td></tr>
 <tr class="separator:a830b4e678f7e5b184ded2e74be1cc7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07767ffcfa1b65be70c596986fd187c4"><td class="memItemLeft" align="right" valign="top"><a id="a07767ffcfa1b65be70c596986fd187c4"></a>
-<a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::ButtonReleaseEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_buttonRelease</b></td></tr>
-<tr class="separator:a07767ffcfa1b65be70c596986fd187c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc9b79dd130dd3aaebaf755a71d1a36a"><td class="memItemLeft" align="right" valign="top"><a id="acc9b79dd130dd3aaebaf755a71d1a36a"></a>
 <a class="el" href="struct_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1optional.html">optional</a>&lt; vsg::KeyPressEvent &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_keyPress</b></td></tr>
 <tr class="separator:acc9b79dd130dd3aaebaf755a71d1a36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,10 +408,6 @@ Action&#160;</td><td class="memItemRight" valign="bottom"><b>_continuousAction</
 <tr class="memitem:a5d26bfd820d21031bbe6dd4002808358"><td class="memItemLeft" align="right" valign="top"><a id="a5d26bfd820d21031bbe6dd4002808358"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_dirty</b></td></tr>
 <tr class="separator:a5d26bfd820d21031bbe6dd4002808358"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cab9b2a3dcef4b16140eda54079d738"><td class="memItemLeft" align="right" valign="top"><a id="a4cab9b2a3dcef4b16140eda54079d738"></a>
-std::map&lt; vsg::observer_ptr&lt; vsg::Window &gt;, vsg::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_o_c_k_y___n_a_m_e_s_p_a_c_e_1_1_map_manipulator.html#a4cab9b2a3dcef4b16140eda54079d738">_windowOffsets</a></td></tr>
-<tr class="memdesc:a4cab9b2a3dcef4b16140eda54079d738"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of windows and theire xy offsets <br /></td></tr>
-<tr class="separator:a4cab9b2a3dcef4b16140eda54079d738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
